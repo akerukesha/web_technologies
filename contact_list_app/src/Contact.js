@@ -45,6 +45,10 @@ class Contact extends Component {
 
 		let contacts = this.state.contacts;
 
+		for(let i = 0; i < contacts.length; ++i){
+			if(contacts[i].name === this.state.name && contacts[i].number === this.state.number) return;
+		}
+
 		contacts.push(
 			{
 				"id": this.state.cnt + 1,

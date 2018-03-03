@@ -14,6 +14,7 @@ class ToDo extends Component {
 			cnt: 0,
 			priority: 0,
 			completed: [],
+			isCompleted: false,
 		};
 
 		this.searchTextChanged = this.searchTextChanged.bind(this);
@@ -58,6 +59,10 @@ class ToDo extends Component {
 		if(this.state.text === "") return;
 
 		let toDoList = this.state.allItems;
+
+		for(let i = 0; i < toDoList.length; ++i){
+			if(toDoList[i].text === this.state.text && toDoList[i].priority === this.state.priority && toDoList[i].isCompleted === this.state.isCompleted) return;
+		}
 
 		toDoList.push(
 			{
