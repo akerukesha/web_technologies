@@ -1,0 +1,26 @@
+
+{% extends "base.html" %}
+
+  
+{% block content %}
+      
+      <div class="well">
+        <h1>
+          {% if contact_list|length > 1 %}
+            {{contact_list|length}} contacts
+          {% elif contact_list|length == 1 %}
+            {{contact_list|length}} contact
+          {% else %}
+            contacts list empty
+          {% endif %}
+        </h1>
+        {% for contact in contact_list %}
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <h2><a href="{% url 'contact_detail' contact_id=contact.id %}">{{contact}}</a></h2>
+            </div>
+          </div>
+      {% endfor %}
+      </div>
+
+{% endblock content %}

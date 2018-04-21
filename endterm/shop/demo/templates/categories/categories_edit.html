@@ -1,0 +1,18 @@
+{%extends "base.html"%}
+
+{% block content %}
+      
+      <div class="well">
+        <div class="panel panel-default">
+        	<div class="panel-body">
+	            <form method='POST' action = "{%url 'edit_category' category_id=category.id%}">
+  						{%csrf_token%}
+  						<input type='text' name="name" placeholder="Category name" value="{{category.name}}">
+  						<br/>
+					    <input type="submit" value="Save">
+  				</form>
+        	</div>
+        </div>
+      </div>
+
+{% endblock content %}

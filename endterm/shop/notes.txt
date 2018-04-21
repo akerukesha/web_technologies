@@ -1,0 +1,6 @@
+pip3 install -r requirements.txt
+
+superuser
+username: akerkeokapova
+email: akerukesha@gmail.com
+password: endtermdjango

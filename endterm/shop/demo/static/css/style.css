@@ -1,0 +1,4 @@
+body {
+  background: url("https://images.unsplash.com/photo-1469957761306-556935073eba?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2048&h=1024&fit=crop&ixid=eyJhcHBfaWQiOjF9&s=4277194e77e3419269c863b5f6b82109") center center no-repeat fixed;
+  background-size: cover;
+}
